@@ -54,3 +54,4 @@ function togglePopup() {
     const volumeSlider = document.getElementById('volumeSlider');
     audioPlayer.volume = volumeSlider.value;
   }
+  
