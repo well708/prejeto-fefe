@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with & Registration | Codehal</title>
+    <link rel="stylesheet" href="style.css"> <!-- tags de estilo -->
+    <style>
+     .carousel-item img {
+        max-width: 50%;
+            max-height: 100%;
+            object-fit: cover;
+            
+        }
+
+    </style>
+<body>
+    <header id="menu">
+        <h2 class="logo"><img src="imgs/logo.jpg" alt="imagem-Logo" style="width:50px; border-radius: 100px;"></h2>
+        <nav class="navigation">
+            <a href="#">História</a>
+            <a href="https://photos.app.goo.gl/ZKwkoRwBAAs1fyRC6">Fotos</a>
+            <a href="#">Momentos</a>
+            <button class="btnLogin-popup" onclick="direciona()">Especial</button>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+           <!-- Mensagem de Feliz Aniversário -->
+<section id="mensagem">
+    <h2>Feliz Aniversário!</h2>
+    <p>Hoje foi um dia verdadeiramente especial. 🎉🎂 achou que eu fosse esquecer foi kskssk... </p>
+    <p>
+       Dedico as últimas horas desse importante dia para fazer uma singela homenagem vinda de um broco feito eu, sem cabeça para pensar em algo fiz e estou fazendo esse projeto de site kksk não sei pq um site né? mas acho que seja pq não tenho criatividade, pois bem feliz niver garota que vc continue sendo essa garotinha maravilhosa, feliz, radiante e contagiante que você é nunca deixe que apaguem esse seu brilho apesar de vc ser do IF ksksk...Pois bem tem algumas aqui estão algumas fotos que juntei neste pequeno período que passamos juntos espero que goste sks ainda tem mais porém ainda não achei todas.
+    </p>
+    
+     
+</section>  
+<section><button class="btn btn-spotify" onclick="togglePopup()"><i class="fab fa-spotify"></i></button></section>
+
+</section>
+<section id="slide"> 
+    <div class="carousel-container">
+    <div class="carousel">
+    <div class="carousel-item"><img src="imgs/image (1).jpg" alt="Imagem1 "></div>
+    <div class="carousel-item"><img src="imgs/image.jpg" alt="Imagem 2"></div>
+    <div class="carousel-item"><img src="imgs/image (2).jpg" alt="Imagem 3"></div>
+    <div class="carousel-item"><img src="imgs/image (3).jpg" alt="Imagem 4"></div>
+    <div class="carousel-item"><img src="imgs/image (4).jpg" alt="Imagem 5"></div>
+    <div class="carousel-item"><img src="imgs/image (5).jpg" alt="Imagem 6"></div>
+    <div class="carousel-item"><img src="imgs/image (6).jpg" alt="Imagem 7"></div>
+    <div class="carousel-item"><img src="imgs/image (7).jpg" alt="Imagem 8"></div>
+    <div class="carousel-item"><img src="imgs/146091ea7a993deb8a6049861afadd44ddc7bb897e2b26333f69b3ad4aa9bb9e_1.jpg.jpg" alt="Imagem 9"></div>
+   
+    </div>
+    </div>
+</section>
+<a href="https://photos.app.goo.gl/ZKwkoRwBAAs1fyRC6"><button class="button-slide">Mais</button></a>
+
+
+<section class="popup-musica">
+    
+  <div id="popup" class="popup">
+    <audio id="audioPlayer" controls>
+      <source src="audio/Lana(MP3_160K).mp3" type="audio/mpeg">
+    </audio>
+    <div class="d-flex justify-content-center mt-2">
+      <div class="track-info">
+        <div class="track-name">Luna</div>
+        <div class="track-artist">karmaitash</div>
+      </div>
+      <button class="btn-control" onclick="playPause()"><i class="fas fa-play"></i></button>
+      <button class="btn-control" onclick="stop()"><i class="fas fa-stop"></i></button>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1" oninput="changeVolume()">
+      <button class=" btn-music" onclick="togglePopup()">Fechar</button>
+    </div>
+   
+  </div>
+</section>
+    
+</main> 
+</body>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script>
+  var lastScrollTop = 0;
+
+  $(window).scroll(function() {
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop) {
+      // Rolagem para baixo
+      $("#menu").css("top", "-100px"); // Esconde o menu movendo-o para cima (altura negativa)
+    } else {
+      // Rolagem para cima
+      $("#menu").css("top", "0"); // Mostra o menu movendo-o para a posição inicial (altura zero)
+    }
+    lastScrollTop = st;
+  });
+
+
+
+
+</script>
+
+</html>
