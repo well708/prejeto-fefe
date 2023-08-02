@@ -21,20 +21,19 @@
 /* Estilo dos itens do menu */
 #menu-list li {
     list-style: none;
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilo dos links do menu */
 #menu-list li a {
+  position: relative;
+    font-size: 1.1rem;
+    color: #ffffff;
     text-decoration: none;
-    color: black;
-    padding: 10px;
-}
-
-/* Estilo do botão Especial no menu */
-#menu-list li button {
-    background: none;
-    border: none;
-    cursor: pointer;
+    font-weight: 500;
+    margin-left: 40px;
 }
 
 /* Estilo do menu dropdown para tela abaixo de 800px */
@@ -50,8 +49,8 @@
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #f9f9f9;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        background-color: #162938;
+        box-shadow: 0 8px 16px rgb(255, 255, 255);
     }
 
     #menu-list li {
@@ -168,4 +167,4 @@ function toggleMenu() {
 
 </script>
 
-</html>
+</html> 
