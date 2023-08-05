@@ -1,52 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Hamburguer com Ícone</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: black;
-        }
+  <title>Imagem Ampliada</title>
+  <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
 
-        header {
-           
-            color: palevioletred;
-           
-        }
-  
+    .zoom-image {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
 
-        
-    </style>
+    .image-container:hover .zoom-image {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="" onclick="toggleMenu()">
-            <span class="material-icons">
-                reorder
-                </span>
-        </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Página 1</a></li>
-                <li><a href="#">Página 2</a></li>
-                <li><a href="#">Página 3</a></li>
-                <li><a href="#">Página 4</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Resto do conteúdo da página -->
+  <div class="image-container">
+    <img src="novaimg/W.png" alt="Imagem" class="normal-image">
+    <div class="zoom-image">
+      <img src="novaimg/W.png" alt="Imagem Ampliada" class="zoomed-image">
+    </div>
+  </div>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            menu.classList.toggle('active');
-        }
-    </script>
+  <script>
+    // Se você quiser personalizar o efeito de zoom, pode adicionar aqui algumas funcionalidades, como a capacidade de arrastar a imagem ampliada ou ajustar o nível de zoom.
+  </script>
 </body>
 </html>
