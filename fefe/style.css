@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(imgs/rubiks-cube-digital-art-wallpaper.jpg) ;
+    background-size: cover;
+    background-position: top;
+   
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 100px;
+    background: #162938;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    transition: top 0.9s ease;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px; 
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s; 
+ }
+ .navigation a:hover::after{
+    transform-origin: left;
+    transform:scaleX(1);
+
+
+ }
+
+.navigation .btnLogin-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+     font-size: 1.1rem;
+     color: #fff;
+     font-weight: 500;
+     margin-left: 40px;
+     transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover{
+    background: #fff;
+    color: #162938;
+
+}
+
+section{
+    display: flex;
+    justify-content: center ;
+}
+
+/* Estilos para a mensagem */
+#mensagem {
+    max-width: 1000px;
+    margin: 7rem auto;
+    background-color: #d5d5d5;
+    border-radius: 10px;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center ;
+    flex-direction: column;
+}
+
+#mensagem h2 {
+    color: #ff6b6b;
+    font-size: 24px;
+}
+
+#mensagem p {
+    color: #333;
+    font-size: 16px;
+    text-indent: 40px;
+}
+ /*áudio  */
+ 
+ .popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 330px;
+    height: 110px;
+    
+  }
+
+  .popup.show {
+    display: block;
+  }
+
+  .popup audio {
+    display: none;
+  }
+
+  .track-info {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .track-info .track-name {
+    font-weight: bold;
+  }
+
+  .track-info .track-artist {
+    color: #b3b3b3;
+  }
+
+  .btn-control {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .btn-control:hover {
+    color: #1ED760;
+  }
+  .btn-spotify {
+  background-color: #1DB954;
+  width: 40px;
+  height: 40px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  position: fixed;
+  top: 90px;
+  right: 10px;
+}
+
+.btn-spotify:hover {
+  background-color: #1ED760;
+}
+
+  .btn-music {
+  margin-left:7px ;
+  width: 90px;
+  height: 30px;
+  background: #ff0000;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #fff;
+  transition: .5s;
+}
+
+.btn-music:hover {
+  background: #fff;
+  color: #162938;
+}
+.popup-musica {
+  display: flex;
+}
+/*  menu carrossel */
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 36%;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 1s ease;
+  }
+
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+
+  .carousel img {
+    width: 50%;
+    height:auto;   
+} 
+
+  /* butão */
+  .button-slide {
+    width: 400px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+    transition: .5s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.button-slide:hover{
+    background: #fff;
+    color: #162938;
+
+}

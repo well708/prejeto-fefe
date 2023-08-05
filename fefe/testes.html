@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hamburguer com Ícone</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+        }
+
+        header {
+           
+            color: palevioletred;
+           
+        }
+  
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="" onclick="toggleMenu()">
+            <span class="material-icons">
+                reorder
+                </span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Página 1</a></li>
+                <li><a href="#">Página 2</a></li>
+                <li><a href="#">Página 3</a></li>
+                <li><a href="#">Página 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Resto do conteúdo da página -->
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
