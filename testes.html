@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Imagem Ampliada</title>
+  <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .zoom-image {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .image-container:hover .zoom-image {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="novaimg/W.png" alt="Imagem" class="normal-image">
+    <div class="zoom-image">
+      <img src="novaimg/W.png" alt="Imagem Ampliada" class="zoomed-image">
+    </div>
+  </div>
+
+  <script>
+    // Se você quiser personalizar o efeito de zoom, pode adicionar aqui algumas funcionalidades, como a capacidade de arrastar a imagem ampliada ou ajustar o nível de zoom.
+  </script>
+</body>
+</html>
